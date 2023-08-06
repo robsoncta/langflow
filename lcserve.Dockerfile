@@ -6,8 +6,11 @@ FROM jinawolf/serving-gateway:${version}
 RUN apt-get update \
     && apt-get install --no-install-recommends -y build-essential libpq-dev
 
-# Instale o ctransformer e  LLama
-RUN pip install ctransformers llama-ccp-python
+# Clonar o repositório ctransformers do GitHub
+RUN git clone https://github.com/marella/ctransformers.git /ctransformers
+
+# Instalar as dependências do ctransformers
+RUN pip install -e /ctransformers
 
 COPY . /appdir/
 
