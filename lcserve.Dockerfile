@@ -6,6 +6,9 @@ FROM jinawolf/serving-gateway:${version}
 RUN apt-get update \
     && apt-get install --no-install-recommends -y build-essential libpq-dev
 
+# Instale o ctransformer e  LLama
+RUN pip install ctransformers llama-ccp-python
+
 COPY . /appdir/
 
 RUN pip install poetry==1.4.0 && cd /appdir && pip install . && \
