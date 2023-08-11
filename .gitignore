@@ -218,13 +218,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+
 
 # Spyder project settings
 .spyderproject
@@ -243,11 +237,11 @@ dmypy.json
 
 # Poetry
 .testenv/*
-langflow.db
+
 
 
 .githooks/prepare-commit-msg
-.langchain.db
+
 
 # docusaurus
 .docusaurus/
